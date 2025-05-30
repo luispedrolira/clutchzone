@@ -1,14 +1,20 @@
-import React, { createContext, useState } from 'react';
-import { CartContextType, CartItem, Product } from '../../types';
+import React, { createContext, useState } from "react";
+import type { CartContextType, CartItem, Product } from "../../types";
 
-export const CartContext = createContext<CartContextType | undefined>(undefined);
+export const CartContext = createContext<CartContextType | undefined>(
+  undefined
+);
 
-export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [items, setItems] = useState<CartItem[]>([]);
 
   const addItem = (product: Product) => {
     setItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.product.id === product.id);
+      const existingItem = prevItems.find(
+        (item) => item.product.id === product.id
+      );
       if (existingItem) {
         return prevItems.map((item) =>
           item.product.id === product.id
@@ -21,7 +27,9 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const removeItem = (productId: string) => {
-    setItems((prevItems) => prevItems.filter((item) => item.product.id !== productId));
+    setItems((prevItems) =>
+      prevItems.filter((item) => item.product.id !== productId)
+    );
   };
 
   const updateQuantity = (productId: string, quantity: number) => {
@@ -50,4 +58,4 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       {children}
     </CartContext.Provider>
   );
-}; 
+};

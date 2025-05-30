@@ -7,6 +7,7 @@ export const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { addItem } = useCart();
   // Aquí iría la lógica para obtener el producto por ID
+  console.log('Product ID:', id);
   const product = null;
 
   if (!product) {
