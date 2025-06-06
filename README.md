@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# ClutchZone Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClutchZone Web es una aplicación web desarrollada con React y TypeScript que proporciona una plataforma para la gestión y visualización de información relacionada con el mundo del gaming.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Puedes ver la aplicación en vivo en: [ClutchZone Web](https://luispedrolira.github.io/clutchzoneweb/)
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- React Router DOM
+- ESLint
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📋 Prerrequisitos
+
+- Node.js (versión recomendada: 18 o superior)
+- npm o yarn
+
+## 🔧 Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/luispedrolira/clutchzoneweb.git
+cd clutchzoneweb
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala las dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# o
+yarn install
 ```
+
+## 🚀 Ejecución del Proyecto
+
+Para ejecutar el proyecto en modo desarrollo:
+
+```bash
+npm run dev
+# o
+yarn dev
+```
+
+Para construir el proyecto para producción:
+
+```bash
+npm run build
+# o
+yarn build
+```
+
+Para previsualizar la versión de producción:
+
+```bash
+npm run preview
+# o
+yarn preview
+```
+
+## 📝 Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo
+- `npm run build`: Construye el proyecto para producción
+- `npm run preview`: Previsualiza la versión de producción
+- `npm run lint`: Ejecuta el linter para verificar el código
+
+## 🤝 Contribución
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
